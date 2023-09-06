@@ -1,9 +1,7 @@
 import React from "react";
-import NavList from '../NavList/NavList';
 
-export default function Navbar({ fixed }) {
+export default function NavBar({ }) {
     const [navbarOpen, setNavbarOpen] = React.useState(false);
-    const list = ['Euro', 'Campaing', 'Drafting']
     return (
         <>
             <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-blue-500 mb-3">
@@ -30,7 +28,23 @@ export default function Navbar({ fixed }) {
                         }
                         id="example-navbar-danger"
                     >
-                        <NavList list={ list } />
+                        <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+                            <li className="nav-item">
+                                <a className="nav-link active" aria-current="page" href="#euro">
+                                    <i className="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Euro</span>
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link active" aria-current="page" href="#campaing">
+                                    <i className="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Campaing</span>
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link active" aria-current="page" href="#drafting">
+                                    <i className="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Drafting</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </nav>
